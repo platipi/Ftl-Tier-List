@@ -1,0 +1,227 @@
+int[] sra = new int[28];
+FloatList[] sr = new FloatList[28];
+String[] srn = new String[28];
+
+void setup(){
+
+  for(int i=0;i<28;i++){
+  sr[i] = new FloatList();
+ }//end initialize intlist
+   loadRanks();
+    loadNames();
+
+  for(int i=0;i<28;i++){
+    for(int o=0;o<sr[i].size();o++){
+    sra[i]+=sr[i].get(o);
+    }
+    sra[i]=round(1.0*sra[i]/sr[i].size());
+  } 
+  
+  for(int o=0;o<10;o++){
+    println("Tier "+(o+1));
+  for(int i=0;i<28;i++){if(sra[i]==10-o){println(srn[i]);}}
+  }
+}//end setup
+
+void loadRanks(){
+  sr[27].append(10);
+   sr[1].append(8);
+  sr[6].append(8);
+  sr[18].append(8);
+  sr[26].append(8);
+   sr[0].append(5);
+   sr[3].append(5);
+  sr[7].append(5);
+  sr[24].append(5);
+  sr[10].append(5);
+  sr[20].append(3);
+  sr[23].append(3);
+  sr[20].append(3);
+  sr[17].append(3);
+  sr[9].append(3);
+  sr[15].append(0);
+   sr[4].append(0);
+  sr[21].append(0);
+  sr[27].append(10);
+  sr[13].append(10);
+  sr[9].append(8);
+  sr[24].append(8);
+   sr[1].append(8);
+  sr[6].append(8);
+  sr[26].append(7);
+  sr[12].append(7);
+  sr[22].append(7);
+   sr[0].append(7);
+  sr[10].append(7);
+   sr[5].append(7);
+   sr[3].append(5);
+  sr[14].append(5);
+  sr[7].append(5);
+  sr[20].append(5);
+  sr[25].append(5);
+  sr[23].append(5);
+  sr[19].append(5);
+  sr[18].append(5);
+   sr[2].append(3);
+  sr[16].append(3);
+  sr[15].append(3);
+  sr[17].append(3);
+  sr[21].append(3);
+   sr[4].append(0);
+  sr[8].append(0);
+  sr[11].append(0);
+  sr[27].append(10);
+  sr[24].append(10);
+  sr[6].append(8);
+   sr[3].append(8);
+  sr[9].append(8);
+  sr[18].append(8);
+  sr[23].append(5);
+   sr[1].append(5);
+  sr[10].append(5);
+   sr[0].append(5);
+  sr[26].append(5);
+  sr[7].append(5);
+  sr[14].append(3);
+  sr[21].append(3);
+  sr[20].append(3);
+  sr[17].append(3);
+  sr[15].append(0);
+   sr[4].append(0);
+  sr[27].append(10);
+  sr[26].append(7);
+   sr[1].append(7);
+  sr[6].append(7);
+  sr[18].append(7);
+  sr[24].append(7);
+  sr[10].append(5);
+   sr[3].append(5);
+   sr[0].append(5);
+  sr[9].append(5);
+  sr[7].append(3);
+  sr[17].append(3);
+  sr[20].append(3);
+  sr[15].append(3);
+  sr[23].append(3);
+  sr[21].append(0);
+   sr[4].append(0);
+  sr[14].append(0);
+  sr[27].append(10);
+   sr[1].append(8.3);
+  sr[24].append(8.3);
+  sr[13].append(8.3);
+   sr[0].append(6.7);
+  sr[9].append(6.7);
+  sr[11].append(6.7);
+  sr[25].append(6.7);
+  sr[6].append(6.7);
+  sr[26].append(6.7);
+   sr[3].append(5);
+   sr[5].append(5);
+  sr[9].append(5);
+  sr[23].append(5);
+  sr[22].append(5);
+  sr[18].append(5);
+  sr[19].append(5);
+  sr[14].append(5);
+   sr[2].append(3.3);
+  sr[7].append(3.3);
+  sr[20].append(3.3);
+  sr[12].append(3.3);  
+  sr[8].append(1.7);
+  sr[21].append(1.7);
+  sr[17].append(1.7);
+   sr[4].append(0);
+  sr[15].append(0);
+  sr[16].append(0);  
+  sr[27].append(10);
+  sr[13].append(10);
+  sr[1].append(9);
+  sr[24].append(9);
+  sr[18].append(9);
+  sr[11].append(8);
+  sr[26].append(8);
+  sr[19].append(7);
+  sr[0].append(7);
+  sr[9].append(7);
+  sr[10].append(7);
+  sr[5].append(7);
+  sr[25].append(7);
+  sr[23].append(7);
+  sr[22].append(7);
+  sr[12].append(7);
+  sr[20].append(6);
+  sr[3].append(6);
+  sr[2].append(6);
+  sr[7].append(6);
+  sr[6].append(6);
+  sr[4].append(5);
+  sr[14].append(5);
+  sr[21].append(4);
+  sr[16].append(3);
+  sr[17].append(3);
+  sr[8].append(2);
+  sr[15].append(1);
+  sr[18].append(7);
+  sr[17].append(1);
+  sr[21].append(5);
+  sr[13].append(9);
+  sr[27].append(9);
+  sr[24].append(7);
+  sr[9].append(7);
+  sr[25].append(7);
+  sr[1].append(7);
+  sr[10].append(7);
+  sr[5].append(7);
+  sr[22].append(7);
+  sr[3].append(7);  
+  sr[14].append(5);
+  sr[0].append(5);
+  sr[26].append(5);
+  sr[6].append(5);
+  sr[20].append(5);
+  sr[23].append(5);
+  sr[12].append(5);
+  sr[2].append(5);
+  sr[11].append(5);
+  sr[19].append(5);
+  sr[18].append(3);
+  sr[7].append(3);
+  sr[21].append(3);
+  sr[17].append(1);
+  sr[15].append(1);
+  sr[16].append(1);
+  sr[8].append(1);
+  sr[4].append(1);
+}//end loadRanks
+
+void loadNames(){
+  srn[0]="Kestrel A - The Kestrel";
+  srn[1]="Kestrel B - Red-Tail";
+  srn[2]="Kestrel C - The Swallow";
+  srn[3]="Engi A - The Torus";
+  srn[4]="Engi B - The Vortex";
+  srn[5]="Engi C - The Teragon";
+  srn[6]="Federation A - The Osprey";
+  srn[7]="Federation B - Nisos";
+  srn[8]="Federation C - Fregatidae";
+  srn[9]="Zoltan A - The Adjudicator";
+  srn[10]="Zoltan B - Noether";
+  srn[11]="Zoltan C - Cerenkov";
+  srn[12]="Lanius A - Kruos";
+  srn[13]="Lanius B - The Shrike";
+  srn[14]="Stealth A - The Nesasio";
+  srn[15]="Stealth B - DA-SR 12";
+  srn[16]="Stealth C - Simo-H";
+  srn[17]="Slug A - Man of War";
+  srn[18]="Slug B - The Stormwalker";
+  srn[19]="Slug C - Ariolimax";
+  srn[20]="Mantis A - The Gila Monster";
+  srn[21]="Mantis B - The Basilisk";
+  srn[22]="Mantis C - The Theseus";
+  srn[23]="Rock A - Bulwark";
+  srn[24]="Rock B - The Shivan";
+  srn[25]="Rock C - Tektite";
+  srn[26]="Crystal A - Kruos";
+  srn[27]="Crystal B - Carnelian";
+}//end loadNames
